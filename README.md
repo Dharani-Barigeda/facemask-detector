@@ -382,13 +382,21 @@ This means: if incorrect_mask probability is within 0.08 of the top probability,
 
 ### Model Performance
 
-*[Add your training results, accuracy metrics, confusion matrix images, and sample detection results here]*
+<img width="2216" height="1466" alt="image" src="https://github.com/user-attachments/assets/535d1739-a4ee-4758-abd2-5fe8494ae946" />
+
+<img width="2246" height="1466" alt="image" src="https://github.com/user-attachments/assets/ad90ea14-680e-475d-8017-f7f55614e254" />
 
 ### Sample Detections
 
 - *Proper mask detection (green box)*
+  ![captured_frame_312](https://github.com/user-attachments/assets/e6a739e1-558f-4283-914f-6829d50def4d)
+
 - *No mask detection (red box)*
+  ![captured_frame_480](https://github.com/user-attachments/assets/657e55f5-465d-4e92-a019-275719b7f481)
+
 - *Incorrect mask detection (orange box)*
+  ![captured_frame_2863](https://github.com/user-attachments/assets/26eb1765-71c0-4657-bb92-54bf75ea79d7)
+
 
 ---
 
