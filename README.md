@@ -623,18 +623,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 📞 Support
-
-For questions, issues, or feature requests:
-- Open an issue on [GitHub](https://github.com/Dharani-Barigeda/facemask-detector/issues)
-- Check existing issues for solutions
-
----
-
-<div align="center">
-
-**FaceMask-Plus** - Built with ❤️ using TensorFlow, OpenCV, and Streamlit
-
-⭐ Star this repo if you find it helpful!
-
 </div>
