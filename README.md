@@ -72,22 +72,6 @@ FaceMask-Plus is an intelligent computer vision system designed to detect and cl
 
 ## 🏗️ Architecture
 
-### Model Architecture
-
-The system uses a **transfer learning** approach with MobileNetV2 as the base architecture:
-
-```
-Input (224×224×3)
-    ↓
-MobileNetV2 (Pre-trained on ImageNet)
-    ↓
-Global Average Pooling
-    ↓
-Dense(128, ReLU) + Dropout(0.5)
-    ↓
-Dense(3, Softmax) → [mask, no_mask, incorrect_mask]
-```
-
 **Training Strategy**:
 1. **Phase 1**: Freeze MobileNetV2 base, train only classification head
 2. **Phase 2**: Unfreeze base model, fine-tune with lower learning rate
@@ -368,22 +352,6 @@ python convert_to_tflite.py --model best_mask_detector.h5 --test
 
 ## ⚙️ Advanced Configuration
 
-### Class-Specific Thresholds
-
-Fine-tune detection sensitivity for each class:
-
-- **`--th_mask`**: Threshold for proper mask detection (default: same as `--confidence`)
-- **`--th_no_mask`**: Threshold for no mask detection (default: same as `--confidence`)
-- **`--th_incorrect`**: Threshold for incorrect mask detection (recommended: 0.30-0.40)
-
-**Example**:
-```bash
-python detect_mask_video.py \
-    --th_mask 0.65 \
-    --th_no_mask 0.5 \
-    --th_incorrect 0.35
-```
-
 ### Incorrect Mask Bias Delta
 
 The `--incorrect_bias_delta` parameter helps prioritize incorrect_mask detection when probabilities are close:
@@ -418,13 +386,9 @@ This means: if incorrect_mask probability is within 0.08 of the top probability,
 
 ### Sample Detections
 
-*[Add screenshots or images showing:*
 - *Proper mask detection (green box)*
 - *No mask detection (red box)*
 - *Incorrect mask detection (orange box)*
-- *Streamlit interface*
-- *Training curves*
-- *Confusion matrix*]
 
 ---
 
@@ -488,28 +452,6 @@ docker run -p 8501:8501 -v $(pwd)/models:/app/models facemask-plus
 # With custom port
 docker run -p 8080:8501 facemask-plus
 ```
-
-### Docker Compose (Optional)
-
-Create `docker-compose.yml`:
-```yaml
-version: '3.8'
-services:
-  facemask-app:
-    build: .
-    ports:
-      - "8501:8501"
-    volumes:
-      - ./models:/app/models
-      - ./violation_snapshots:/app/violation_snapshots
-```
-
-Run with:
-```bash
-docker-compose up
-```
-
----
 
 ## 🔧 Troubleshooting
 
