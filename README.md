@@ -14,24 +14,6 @@ A production-ready, deep learning-based face mask detection system that accurate
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Key Features](#-key-features)
-- [Architecture](#-architecture)
-- [Installation](#-installation)
-- [Dataset Preparation](#-dataset-preparation)
-- [Usage](#-usage)
-- [Advanced Configuration](#-advanced-configuration)
-- [Results](#-results)
-- [Performance Optimization](#-performance-optimization)
-- [Docker Deployment](#-docker-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-
----
-
 ## Overview
 
 FaceMask-Plus is an intelligent computer vision system designed to detect and classify face mask usage in real-time. The system uses a fine-tuned MobileNetV2 architecture to achieve high accuracy in distinguishing between proper mask usage, no mask, and incorrect mask placement (such as masks worn below the nose or mouth).
