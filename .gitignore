@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files (large files)
+*.h5
+*.hdf5
+*.tflite
+*.pb
+*.ckpt
+
+# Training outputs
+training_history.png
+confusion_matrix.png
+class_indices.json
+
+# Dataset (user's data)
+dataset/
+example_dataset/
+
+# Generated files
+violations.csv
+violation_snapshots/
+captured_frame_*.jpg
+output_*.jpg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker
+.dockerignore
+

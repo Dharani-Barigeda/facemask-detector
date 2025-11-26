@@ -1,0 +1,12 @@
+tensorflow>=2.5
+opencv-python
+numpy
+pandas
+imutils
+streamlit
+Pillow
+scikit-learn
+matplotlib
+tqdm
+seaborn
+
